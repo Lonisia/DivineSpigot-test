@@ -23,6 +23,11 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global init.defaultBranch master
 
+      - name: Grant execute permissions
+        run: |
+          chmod +x gradlew
+          chmod +x *
+
       - name: Setup build environment
         run: ./panda setup
 
